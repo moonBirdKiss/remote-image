@@ -1,0 +1,1 @@
+FROM pytorch/pytorch:2.10.0-cuda13.0-cudnn9-runtime
