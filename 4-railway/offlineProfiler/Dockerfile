@@ -45,7 +45,6 @@ RUN python -m pip install \
     "numpy>=1.24.0" \
     "torch>=2.1.0" \
     "torchvision>=0.16.0" \
-    "ultralytics>=8.1.0" \
     "transformers>=4.40.0" \
     "huggingface-hub>=0.23.0" \
     "tqdm>=4.66.0" \
