@@ -1,5 +1,5 @@
 # 使用官方 Python 镜像（ML 推理场景中常见的稳定版本）
-FROM python:3.10-bookworm
+FROM python:3.12-bookworm
 
 ENV DEBIAN_FRONTEND=noninteractive \
     PYTHONDONTWRITEBYTECODE=1 \
