@@ -30,7 +30,8 @@ RUN python -m pip install --upgrade pip && \
     --index-url https://download.pytorch.org/whl/cu121 \
     --extra-index-url https://pypi.org/simple \
     "torch>=2.2.0" \
-    "pynvml>=11.5.0"
+    "numpy>=1.26.0,<2.0.0" \
+    "nvidia-ml-py==12.560.30"
 
 RUN mkdir -p /tmp/gpu_uds_benchmark /tmp/nvidia-mps /tmp/nvidia-log
 
