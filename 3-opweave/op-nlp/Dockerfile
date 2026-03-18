@@ -29,8 +29,7 @@ RUN python3 -m pip install --upgrade pip setuptools wheel && \
 
 COPY . .
 
-RUN chmod +x scripts/*.sh && \
-    mkdir -p "${CUDA_MPS_PIPE_DIRECTORY}" "${CUDA_MPS_LOG_DIRECTORY}"
+RUN mkdir -p "${CUDA_MPS_PIPE_DIRECTORY}" "${CUDA_MPS_LOG_DIRECTORY}"
 
 
 CMD ["bash"]
