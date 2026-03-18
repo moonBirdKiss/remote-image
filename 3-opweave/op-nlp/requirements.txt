@@ -1,0 +1,6 @@
+numpy==1.26.4
+transformers==4.52.4
+accelerate==1.2.0
+numba==0.60.0
+safetensors==0.5.3
+nvidia-ml-py==12.560.30
