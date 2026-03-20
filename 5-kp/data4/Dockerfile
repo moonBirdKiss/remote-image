@@ -1,0 +1,27 @@
+FROM python:3.11-slim
+
+ENV PYTHONDONTWRITEBYTECODE=1 \
+    PYTHONUNBUFFERED=1 \
+    PIP_NO_CACHE_DIR=1 \
+    MPLBACKEND=Agg
+
+WORKDIR /app
+
+COPY requirements.txt ./
+
+RUN pip install --upgrade pip \
+    && pip install -r requirements.txt
+
+COPY analyze.py ./
+COPY README.md ./
+COPY serverless_analysis ./serverless_analysis
+
+RUN useradd --create-home --shell /bin/bash appuser \
+    && mkdir -p /app/data /app/output \
+    && chown -R appuser:appuser /app
+
+USER appuser
+
+VOLUME ["/app/data", "/app/output"]
+
+CMD ["bash"]
