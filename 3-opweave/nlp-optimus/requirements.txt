@@ -3,7 +3,7 @@
 # Core runtime
 torch==2.11.0+cu128
 transformers==5.5.4
-huggingface-hub==1.4.1
+huggingface-hub==1.10.2
 safetensors==0.7.0
 fastapi==0.121.0
 uvicorn[standard]==0.43.0
