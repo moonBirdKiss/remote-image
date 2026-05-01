@@ -35,6 +35,9 @@ RUN python -m pip install --no-cache-dir \
     "nvidia-ml-py==12.560.30"
 
 
+COPY ./requirements.txt /tmp/requirements.txt
+RUN python -m pip install --no-cache-dir -r /tmp/requirements.txt
+
 # MPS pipe/log directories
 RUN mkdir -p /tmp/nvidia-mps /tmp/nvidia-log
 
